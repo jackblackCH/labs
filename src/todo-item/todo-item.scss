@@ -1,0 +1,11 @@
+.c-todo-item {
+  padding: 20px;
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox:checked + span {
+    text-decoration: line-through;
+  }
+}

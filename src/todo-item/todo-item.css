@@ -1,0 +1,8 @@
+.c-todo-item {
+  padding: 20px; }
+
+.c-todo-item__checkbox {
+  display: none; }
+
+.c-todo-item__checkbox:checked + span {
+  text-decoration: line-through; }
