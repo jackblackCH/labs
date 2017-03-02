@@ -4,7 +4,7 @@ import toJson from 'enzyme-to-json';
 import TodoInput from '../todo-input/TodoInput';
 
 it('should render an input', () => {
-	const tree = toJson(shallow(<TodoInput value="hello" onChange={() => {}} />));
+	const tree = toJson(shallow(<TodoInput value="hello" />));
 	expect(tree).toMatchSnapshot();
 });
 

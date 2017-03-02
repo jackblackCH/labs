@@ -1,3 +1,9 @@
 .c-todo-list {
   margin: 0 auto;
   max-width: 480px; }
+
+.c-todo-item {
+  padding: 20px; }
+
+.c-todo-item__checkbox:checked + .c-todo-item__text {
+  text-decoration: line-through; }

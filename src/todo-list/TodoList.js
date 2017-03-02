@@ -7,7 +7,11 @@ import './todo-list.css';
 
 const TodoList = (props) =>
 <ul className="c-todo-list">
-  { props.items.map( (item, index) => <TodoItem item={item} id={index} key={index} />) }
+      { props.items.map( (item, index) =>
+        <li className="c-todo-item" key={index}>
+          <TodoItem onClick={props.updateItem} text={item.text} checked={item.checked} id={index} />
+        </li>
+      )}
 </ul>
 
 export default TodoList;

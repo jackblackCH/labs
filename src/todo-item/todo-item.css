@@ -1,6 +1,0 @@
-.c-todo-item {
-  padding: 20px; }
-  .c-todo-item__checkbox {
-    display: none; }
-  .c-todo-item__checkbox:checked + .c-todo-item__text {
-    text-decoration: line-through; }

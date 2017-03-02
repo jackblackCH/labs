@@ -2,3 +2,15 @@
   margin: 0 auto;
   max-width: 480px;
 }
+
+.c-todo-item {
+  padding: 20px;
+
+  &__checkbox {
+    //display: none;
+  }
+
+  &__checkbox:checked + &__text {
+    text-decoration: line-through;
+  }
+}

@@ -27,12 +27,27 @@ function WithItems(WrappedComponent) {
       })
     }
 
+    setCheckedState(ev) {
+      const adaptedItems = this.state.items.reduce( (item, index) => {
+        if ( index === parseInt(ev.target.id, 10) ) {
+            item.checked = !item.checked;
+            console.log('set state', item, index);
+            return item;
+        }
+      });
+
+      this.setState({
+        items: [...this.state.items, ...[adaptedItems]]
+      })
+    }
+
     render() {
       const newProps = {
         addItem: this.addItem.bind(this),
         inputValue: this.state.inputValue,
-        updateInputValue: this.updateInputValue.bind(this),
-        items: this.state.items
+        items: this.state.items,
+        updateItem: this.setCheckedState.bind(this),
+        updateInputValue: this.updateInputValue.bind(this)
       }
       return <WrappedComponent {...this.props} {...newProps} />
     }
